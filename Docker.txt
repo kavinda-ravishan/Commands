@@ -35,7 +35,7 @@ CMD ["npm", "start"]
 sudo docker build -t name-the-docker-image . : Build container('.' is for currunt dir)
 sudo docker run -it -p 3000:3000 --name name-container docker-image-name ( it - interactive terminal, d - detached mode )
 
-sudo docker run -d -p 3000:3000 --name name-container docker-image-name
+sudo docker run -d -p 3001:3000 --name name-container docker-image-name ( map container port 3000 to pc port 3001 )
 sudo docker run -d -p 3000:3000 chat-app ( Docker give random name for the container )
 sudo docker attach container-name : Attach to detached running container
 
