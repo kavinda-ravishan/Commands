@@ -1,0 +1,48 @@
+sudo apt install docker.io
+docker --version
+sudo systemctl enable --now docker
+sudo systemctl status docker
+
+//Download an example image and run a container 
+sudo docker run image-name : pull and run
+sudo docker pull image-name : just pull the image
+
+//Download run and goto centos bash and stop the container
+sudo docker run -d -t --name cent centos : Down load centOS name the container as cent and run
+sudo docker exec -it cent bash : connect cent bash (exec - execute)
+sudo docker stop cent : stop container Ex : Name of container cent
+
+//Show images
+sudo docker images : Show all local images
+sudo docker image ls : show all images
+
+//Show containers
+sudo docker ps : Show running images
+sudo docker ps -a: Show running and stoped images
+
+//Dockerfile 
+
+FROM node:9-slim
+WORKDIR /app
+COPY package.json /app
+RUN npm install
+COPY . /app
+CMD ["npm", "start"]
+
+//
+
+//Build and run containers
+sudo docker build -t name-the-docker-image . : Build container('.' is for currunt dir)
+sudo docker run -it -p 3000:3000 --name name-container docker-image-name ( it - interactive terminal, d - detached mode )
+
+sudo docker run -d -p 3000:3000 --name name-container docker-image-name
+sudo docker run -d -p 3000:3000 chat-app ( Docker give random name for the container )
+sudo docker attach container-name : Attach to detached running container
+
+//Start, Stop containers build
+sudo docker start container-name : start build container
+sudo docker stop running-container-name : Stop running container
+
+sudo docker rm docker-container-name : remove container 
+sudo docker rmi docker-image-name : remove image
+docker system prune -a : delete all images
