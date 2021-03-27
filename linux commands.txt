@@ -1,0 +1,29 @@
+sudo -s
+sudo apt-get update
+
+ls : list all files and folders in urrunt directary
+ls *txt : show all txt files (filter)
+ls -l : 1.show list of files and folders in directary with information
+ls -a : 2.show all files with hidden files (exp : .env)
+ls -ls : 1+2
+
+cd : change dir
+cd ../ : go back ones
+
+pwd : print working dirctory
+
+mkdir name: make dir
+mkdir "folder name": make dir
+rmdir name: Remove dir (only MT dir)
+rm name: remove file
+rm -R name : remove any file or folder
+rm p*.jpg : remove all jpg s start with p
+
+cp name_of_file_for_copy name_for_copied_file : copy
+cp file_name dir : copy to somewhere
+mv file_name dir : move file
+mv file_name dir/new_name : move file
+mv file_name new_file_name : rename file
+
+cat file_name : concatenate to terminal
+more file_name : show one page at time Press space to navigate ( or less command)
