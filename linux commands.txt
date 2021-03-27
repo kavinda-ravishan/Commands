@@ -27,3 +27,23 @@ mv file_name new_file_name : rename file
 
 cat file_name : concatenate to terminal
 more file_name : show one page at time Press space to navigate ( or less command)
+
+grep text_need_to_find file_name : search a text or part of text in txt file
+grep -i text_need_to_find file_name : -i ignore lower or upper cases
+grep -i text_need_to_find *.txt : -i ignore lower or upper cases find in all txt files
+
+wc file_name : word count
+wc -l file_name : show only no of lines
+
+ps : show running processors on you'r private area
+ps aux : show all running processors
+
+**
+open nano then press 'ctrl+z' and goto terminal and type 'fg' for get for bring foreground nano task
+jobs : see all stoped backgroung tasks
+ex :-
+[1]-  Stopped                 nano names.txt
+[2]+  Stopped                 nano names2.txt
+
+fg %2 : goto names2.txt
+**
