@@ -26,3 +26,5 @@ git status : show untraked file
 git add . : add all untracked changes
 git commit -m "message"
 git push --set-upstream origin alpha : push with new brach
+
+git clone URL -b branch_name
