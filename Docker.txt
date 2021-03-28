@@ -56,3 +56,6 @@ docker pull image_name:tag , docker run image_name:tag (Ex : docker pull node:14
 docker inspect docker_image_name : get all details
 docker logs container_name : get content written to standet out from detached mode
 
+//environment variables
+docker run -i -p 80:3000 -e PORT=3000 --name app chat-app : Env PORT:3000
+docker run -i -p 80:3000 -e PORT=3000 -e TOKEN_SECRET=DsofjiU&*Yfdn3k --name app chat-app : multiple envs
