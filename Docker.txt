@@ -35,7 +35,7 @@ CMD ["npm", "start"]
 sudo docker build -t name-the-docker-image . : Build container('.' is for currunt dir)
 sudo docker run -it -p 3000:3000 --name name-container docker-image-name ( it - interactive terminal, d - detached mode )
 
-sudo docker run -d -p 3001:3000 --name name-container docker-image-name ( map container port 3000 to pc port 3001 )
+sudo docker run -d -p 3001:3000 --name name-container docker-image-name ( map pc port 3001 to container port 3000 )
 sudo docker run -d -p 3000:3000 chat-app ( Docker give random name for the container )
 sudo docker attach container-name : Attach to detached running container
 
@@ -47,3 +47,12 @@ sudo docker stop running-container-name : Stop running container
 sudo docker rm docker-container-name : remove container 
 sudo docker rmi docker-image-name : remove image
 docker system prune -a : delete all images
+
+//Tag
+docker pull image_name:tag , docker run image_name:tag (Ex : docker pull node:14-slim)
+
+-v /home/app:/var/db : map pc /home/app dir to container var/db
+
+docker inspect docker_image_name : get all details
+docker logs container_name : get content written to standet out from detached mode
+
