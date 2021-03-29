@@ -1,3 +1,5 @@
+whoami : user (ex : root)
+touch file_name : create a file
 sudo -s
 sudo apt-get update
 
