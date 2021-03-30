@@ -1,3 +1,5 @@
+https://youtu.be/fqMOX6JJhGo
+
 sudo apt install docker.io
 docker --version
 sudo systemctl enable --now docker
@@ -30,6 +32,11 @@ COPY . /app
 CMD ["npm", "start"]
 
 //
+CMD ["command", "param1"]: Exicute when container start running
+
+ENTRYPOINT ["sleep"] : docker run ubuntu-sleep 10 (sleep 10)
+CMD ["5"] : default value, can overwrit by ubuntu-sleep 10
+docker run --entrypoint sleep2.0 ubuntu-sleep 10 : overwrite sleep CMD
 
 //Build and run containers
 sudo docker build -t name-the-docker-image . : Build container('.' is for currunt dir)
@@ -55,7 +62,23 @@ docker pull image_name:tag , docker run image_name:tag (Ex : docker pull node:14
 
 docker inspect docker_image_name : get all details
 docker logs container_name : get content written to standet out from detached mode
+dockre history image_name : show all layers with information
 
 //environment variables
 docker run -i -p 80:3000 -e PORT=3000 --name app chat-app : Env PORT:3000
 docker run -i -p 80:3000 -e PORT=3000 -e TOKEN_SECRET=DsofjiU&*Yfdn3k --name app chat-app : multiple envs
+
+//Networks
+docker run ubuntu : Bridge, default, have intrnal IP
+docker run ubuntu --network=host : host network
+docker run ubuntu --network=none : completely isolated
+
+//Volumes
+/var/lib/docker
+
+volume mount
+docker volume create vol1
+docker run -v vol1:/var/lib/mysql mysql
+
+bind mount
+docker run -v /data/mysql:/var/lib/mysql mysql
