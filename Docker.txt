@@ -73,6 +73,10 @@ docker run ubuntu : Bridge, default, have intrnal IP
 docker run ubuntu --network=host : host network
 docker run ubuntu --network=none : completely isolated
 
+//Controll groups(cgroups)
+docker run --cpus=0.5 ubuntu : Container cannot exceed 50% of cpu usage
+docker run --memory=100m ubuntu : Container cannot exceed 100mb of memory usage
+
 //Volumes
 /var/lib/docker
 
