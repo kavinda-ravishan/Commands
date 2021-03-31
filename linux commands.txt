@@ -2,6 +2,10 @@ whoami : user (ex : root)
 touch file_name : create a file
 sudo -s
 sudo apt-get update
+ctrl+l : clear the bash
+ctrl+w : erase word bash
+
+history : show previously entered commands (!command_number)
 
 ls : list all files and folders in urrunt directary
 ls *txt : show all txt files (filter)
@@ -29,6 +33,13 @@ mv file_name new_file_name : rename file
 
 cat file_name : concatenate to terminal
 more file_name : show one page at time Press space to navigate ( or less command)
+less : new more
+head -n 2 file_name : show only first 2 linse
+tail -n 2 file_name : show only last 2 linse
+
+> : redirct
+cat file_name : read file and show in std out
+cat file1 > file2 : read file1 and send to file2
 
 grep text_need_to_find file_name : search a text or part of text in txt file
 grep -i text_need_to_find file_name : -i ignore lower or upper cases
