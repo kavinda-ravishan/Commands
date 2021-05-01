@@ -32,7 +32,7 @@ COPY . /app
 CMD ["npm", "start"]
 
 //
-CMD ["command", "param1"]: Exicute when container start running
+CMD ["command", "param1"]: Exicute when container start running (type : exit , for exit form container)
 
 ENTRYPOINT ["sleep"] : docker run ubuntu-sleep 10 (sleep 10)
 CMD ["5"] : default value, can overwrit by ubuntu-sleep 10
