@@ -59,10 +59,6 @@ docker system prune -a : delete all images
 //Tag
 docker pull image_name:tag , docker run image_name:tag (Ex : docker pull node:14-slim)
 
--v /home/app:/var/db : map pc /home/app dir to container var/db
--v path_to_folder_location:path_to_container_location (need to use absolute path or full path)
-( for get dir : win cmd = %cd% , win power shell = ${pwd} , linux = $(pwd) )
-
 docker inspect docker_image_name : get all details
 docker logs container_name : get content written to standet out from detached mode
 dockre history image_name : show all layers with information
@@ -81,17 +77,23 @@ docker run --cpus=0.5 ubuntu : Container cannot exceed 50% of cpu usage
 docker run --memory=100m ubuntu : Container cannot exceed 100mb of memory usage
 
 //Volumes
+
+-v /home/app:/var/db : map pc /home/app dir to container var/db
+-v path_to_folder_location:path_to_container_location (need to use absolute path or full path)
+( for get dir : win cmd = %cd% , win power shell = ${pwd} , linux = $(pwd) )
+docker run -v $(pwd):/app -v /app/node_modules -p 3000:3000 -d --name node-app node-app-image (for fix overwriting node_module folder)
+
 /var/lib/docker
 
-volume mount
+//volume mount
 docker volume create vol1
 docker run -v vol1:/var/lib/mysql mysql
 
-bind mount
+//bind mount
 docker run -v /data/mysql:/var/lib/mysql mysql
 
-get in to container
+//get in to container
 docker exec -it container-name bash : open bash terminal of container (type : exit , for exit form container)
 
-see log files
+//see log files
 docker logs container-name
