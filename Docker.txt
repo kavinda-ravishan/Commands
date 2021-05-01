@@ -32,7 +32,7 @@ COPY . /app
 CMD ["npm", "start"]
 
 //
-CMD ["command", "param1"]: Exicute when container start running (type : exit , for exit form container)
+CMD ["command", "param1"]: Exicute when container start running
 
 ENTRYPOINT ["sleep"] : docker run ubuntu-sleep 10 (sleep 10)
 CMD ["5"] : default value, can overwrit by ubuntu-sleep 10
@@ -89,4 +89,4 @@ bind mount
 docker run -v /data/mysql:/var/lib/mysql mysql
 
 get in to container
-docker exec -it container-name bash : open bash terminal of container
+docker exec -it container-name bash : open bash terminal of container (type : exit , for exit form container)
