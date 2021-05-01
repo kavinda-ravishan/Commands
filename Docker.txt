@@ -76,12 +76,17 @@ docker run ubuntu --network=none : completely isolated
 docker run --cpus=0.5 ubuntu : Container cannot exceed 50% of cpu usage
 docker run --memory=100m ubuntu : Container cannot exceed 100mb of memory usage
 
-//Volumes
+//Binding
 
 -v /home/app:/var/db : map pc /home/app dir to container var/db
 -v path_to_folder_location:path_to_container_location (need to use absolute path or full path)
 ( for get dir : win cmd = %cd% , win power shell = ${pwd} , linux = $(pwd) )
 docker run -v $(pwd):/app -v /app/node_modules -p 3000:3000 -d --name node-app node-app-image (for fix overwriting node_module folder)
+
+//read only bind
+docker run -v $(pwd):/app:ro -v /app/node_modules -p 3000:3000 -d --name node-app node-app-image
+
+//Volumes
 
 /var/lib/docker
 
