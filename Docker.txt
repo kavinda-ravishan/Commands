@@ -51,7 +51,8 @@ sudo docker start container-name : start build container
 sudo docker stop running-container-name : Stop running container
 
 //Remove images and containers
-sudo docker rm docker-container-name : remove container 
+sudo docker rm docker-container-name : remove container
+sudo docker rm docker-container-name -f : remove running container (-f force)
 sudo docker rmi docker-image-name : remove image
 docker system prune -a : delete all images
 
