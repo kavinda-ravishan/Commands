@@ -87,3 +87,6 @@ docker run -v vol1:/var/lib/mysql mysql
 
 bind mount
 docker run -v /data/mysql:/var/lib/mysql mysql
+
+get in to container
+docker exec -it container-name bash : open bash terminal of container
