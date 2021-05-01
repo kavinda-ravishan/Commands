@@ -60,6 +60,7 @@ docker system prune -a : delete all images
 docker pull image_name:tag , docker run image_name:tag (Ex : docker pull node:14-slim)
 
 -v /home/app:/var/db : map pc /home/app dir to container var/db
+-v path_to_folder_location:path_to_container_location (need to use absolute path or full path)
 
 docker inspect docker_image_name : get all details
 docker logs container_name : get content written to standet out from detached mode
