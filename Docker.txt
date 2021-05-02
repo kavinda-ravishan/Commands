@@ -98,6 +98,9 @@ docker volume ls
 docker volume rm volume_name
 docker volume prune
 
+//pass the -v flag for delete volume assosiate with container
+docker rm container_name -fv
+
 /var/lib/docker
 
 //volume mount
