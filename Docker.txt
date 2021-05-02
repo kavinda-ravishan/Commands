@@ -122,7 +122,7 @@ docker-compose up -d (-d flag for detached mode)
 docker-compose up --build -d (--build force to build the image)
 
 //run containers with multiple docker compose files, docker-compose.yml and this will overwrite by docker-compose.dev.yml file
-docker-compose -f docker-compose.yml -f docker-compose.dev.yml up -d
+docker-compose -f docker-compose.yml -f docker-compose.dev.yml up -d --build
 
 //down containers
 docker-compose down -v (-v delete voluem)
