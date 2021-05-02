@@ -126,4 +126,4 @@ docker-compose -f docker-compose.yml -f docker-compose.dev.yml up -d
 
 //down containers
 docker-compose down -v (-v delete voluem)
-
+docker-compose -f docker-compose.yml -f docker-compose.dev.yml down -v
