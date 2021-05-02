@@ -94,6 +94,10 @@ docker run -v $(pwd):/app:ro -v /app/node_modules -p 3000:3000 -d --name node-ap
 //list all volumes
 docker volume ls
 
+//remove volume
+docker volume rm volume_name
+docker volume prune
+
 /var/lib/docker
 
 //volume mount
