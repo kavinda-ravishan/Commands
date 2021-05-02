@@ -67,6 +67,9 @@ dockre history image_name : show all layers with information
 docker run -i -p 80:3000 -e PORT=3000 --name app chat-app : Env PORT:3000
 docker run -i -p 80:3000 -e PORT=3000 -e TOKEN_SECRET=DsofjiU&*Yfdn3k --name app chat-app : multiple envs
 
+//by creating .env file and put all envs
+--env-file ./.env
+
 //Networks
 docker run ubuntu : Bridge, default, have intrnal IP
 docker run ubuntu --network=host : host network
