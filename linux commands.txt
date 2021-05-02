@@ -60,3 +60,6 @@ ex :-
 
 fg %2 : goto names2.txt
 **
+
+//print env
+printenv
