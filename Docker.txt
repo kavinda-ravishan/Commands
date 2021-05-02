@@ -115,3 +115,6 @@ docker exec -it container-name bash : open bash terminal of container (type : ex
 
 //see log files
 docker logs container-name
+
+//build and run containers with docker compose file
+docker-compose up -d (-d flag for detached mode)
