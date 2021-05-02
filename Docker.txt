@@ -119,3 +119,7 @@ docker logs container-name
 //build and run containers with docker compose file
 docker-compose up --help (get help)
 docker-compose up -d (-d flag for detached mode)
+
+//down containers
+docker-compose down -v (-v delete voluem)
+
