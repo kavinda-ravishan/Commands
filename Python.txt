@@ -1,0 +1,14 @@
+py -3 -m venv env
+
+settings.json
+{
+  "python.pythonPath": "E:\\Projects\\Python\\app\\env\\Scripts\\python.exe"
+}
+
+pip install package_name
+
+pip freeze : show all installed packages
+
+pip freeze > requirments.txt
+
+pip install -r .\requirments.txt
