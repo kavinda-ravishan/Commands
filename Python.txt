@@ -1,5 +1,7 @@
 py -3 -m venv env
 
+.\env\Scripts\activate
+
 settings.json
 {
   "python.pythonPath": "E:\\Projects\\Python\\app\\env\\Scripts\\python.exe"
