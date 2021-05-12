@@ -63,3 +63,11 @@ fg %2 : goto names2.txt
 
 //print env
 printenv
+
+
+// File permission
+user group everyone
+rwx   rwx    rwx
+421   421    421
+
+chmod 777 ./example_file -R  : rwxrwxrwx to file and all inside
