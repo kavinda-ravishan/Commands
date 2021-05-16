@@ -156,3 +156,19 @@ ocker-compose -f docker-compose.yml -f docker-compose.prod.yml up -d --no-deps n
 
 //Watch tower can automaticaly update when new image is pushed to the docker-hub
 docker run -d --name watchtower -e WATCHTOWER_TRACE=true -e WATCHTOWER_DEGUG=true -e WATCHTOWER_POLL_INTERVAL=50 -v /var/run/docker.sock:/var/run/docker.sock containrrr/watchtower docker_devops_nodejs_express_node-app_1
+
+//Swarm is a container orchestrater like kubernetes
+docker swarm init  : init the docker swarm
+
+//deploy or rolling update with swarm
+docker stack deploy -c docker-compose.yml -c docker-compose.prod.yml stack_name
+docker stack ps stack_name : show all containers and tasks
+
+//list all nodes in docker swarm
+docker node ls
+
+//list all stacks in swarm
+docker stack ls
+
+//list all services in stack
+ docker stack services stack_name
