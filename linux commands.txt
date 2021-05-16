@@ -64,6 +64,8 @@ fg %2 : goto names2.txt
 //print env
 printenv
 
+//add env
+export ENV_KEY="ENV_VALUE"
 
 // File permission
 user group everyone
