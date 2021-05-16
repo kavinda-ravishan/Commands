@@ -139,3 +139,20 @@ docker-compose -f docker-compose.yml -f docker-compose.dev.yml up -d --no-deps c
 //down containers
 docker-compose down -v (-v delete voluem)
 docker-compose -f docker-compose.yml -f docker-compose.dev.yml down -v
+
+//rename image to docker-hub name for push
+docker image tag docker_devops_nodejs_express_node-app slspider/node-app
+
+//Dev Server
+//build node-app image
+docker-compose -f docker-compose.yml -f docker-compose.dev.yml build node-app
+//push image, here only node-app
+docker-compose -f docker-compose.yml -f docker-compose.prod.yml push node-app
+//Production Server
+//pull new image
+docker-compose -f docker-compose.yml -f docker-compose.prod.yml pull
+//run with new changes
+ocker-compose -f docker-compose.yml -f docker-compose.prod.yml up -d --no-deps node-app
+
+//Watch tower can automaticaly update when new image is pushed to the docker-hub
+docker run -d --name watchtower -e WATCHTOWER_TRACE=true -e WATCHTOWER_DEGUG=true -e WATCHTOWER_POLL_INTERVAL=50 -v /var/run/docker.sock:/var/run/docker.sock containrrr/watchtower docker_devops_nodejs_express_node-app_1
