@@ -127,6 +127,12 @@ docker-compose up --build -d (--build force to build the image)
 //run containers with multiple docker compose files, docker-compose.yml and this will overwrite by docker-compose.dev.yml file
 docker-compose -f docker-compose.yml -f docker-compose.dev.yml up -d --build
 
+//build node-app only and node-app depend on mongo so need to tell explicitly dont build dependencies
+docker-compose -f docker-compose.yml -f docker-compose.dev.yml up -d --build --no-deps node-app
+
+//get help about flags
+docker-compose -f docker-compose.yml -f docker-compose.dev.yml up --help
+
 //spin up only specified container
 docker-compose -f docker-compose.yml -f docker-compose.dev.yml up -d --no-deps container_name 
 
