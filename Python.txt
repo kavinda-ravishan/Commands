@@ -14,3 +14,6 @@ pip freeze : show all installed packages
 pip freeze > requirments.txt
 
 pip install -r .\requirments.txt
+
+conda deactivate
+conda activate
