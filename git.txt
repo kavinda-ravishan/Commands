@@ -1,8 +1,25 @@
+remove --global flag to work with local
+
+git config --global --get user.name   : get name
+git config --global --get user.email  : get email
+
+git config --global user.name "name"                : add name
+git config --global user.email "name@example.com"   : add email
+
 …or create a new repository on the command line
 
 echo "# Object_Tracking" >> README.md
 git init
-git add README.md
+
+add specific file
+  git add README.md
+  
+Add files to staging
+
+  git add --all
+  git add -A
+  git add .
+
 git commit -m "first commit"
 git branch -M main
 git remote add origin https://github.com/kavinda-ravishan/Object_Tracking.git
@@ -20,6 +37,7 @@ git branch branch_name : create new branch
 git branch --list : show all branches
 git checkout branch_name : switch to branch
 git checkout -b branch_name : create and switch to new branch
+git log : log
 
 touch file_name : create new file
 git status : show untraked file
