@@ -37,7 +37,6 @@ git branch branch_name : create new branch
 git branch --list : show all branches
 git checkout branch_name : switch to branch
 git checkout -b branch_name : create and switch to new branch
-git log : log
 
 touch file_name : create new file
 git status : show untraked file
@@ -46,3 +45,37 @@ git commit -m "message"
 git push --set-upstream origin alpha : push with new brach
 
 git clone URL -b branch_name
+
+
+git log : log
+  Result :
+    commit 55f9942b936a771837b8b5af61ac9e4eda974171 (HEAD -> master)
+    Author: kavinda-ravishan <kvnravishan@outlook.com>
+    Date:   Tue Mar 1 15:33:46 2022 +0530
+
+        init
+    
+  HEAD : currently working branch (master)
+  55f9942b936a771837b8b5af61ac9e4eda974171 : unique commit hash
+
+git environments:
+  * working : after last commit
+  * staging : "git add" command  
+  * commit  : "git commit" command (new log entry create with new hash)
+
+git status : show status
+file status:
+  * tracked   : files exists in previous commit
+    * unmodified
+    * modified
+    * staged
+  * untracked : everything else
+
+restore to previous commit (changes only apply for untracked files):
+  git restore .
+  git restore file_name
+  git checkout .
+
+remove form staging (after "git add" command):
+  git restore --staged .
+  git restore --staged file_name
