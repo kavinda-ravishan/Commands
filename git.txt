@@ -79,3 +79,17 @@ restore to previous commit (changes only apply for untracked files):
 remove form staging (after "git add" command):
   git restore --staged .
   git restore --staged file_name
+
+
+gitignore
+  note.txt : ignore a file
+  note_folder/ : ignore a folder
+  /*-todo.md : ignore any __-todo.md files in current directory
+  */*-todo.md : ignore any __-todo.md files in sub directory
+  **/*-todo.md : ignore any __-todo.md files in current/sub directory
+
+global ignore file
+  git config --global core.excludefile file_name
+
+  clear cache
+    git rm -r --cached .
