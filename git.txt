@@ -81,15 +81,24 @@ remove form staging (after "git add" command):
   git restore --staged file_name
 
 
-gitignore
+gitignore:
   note.txt : ignore a file
   note_folder/ : ignore a folder
   /*-todo.md : ignore any __-todo.md files in current directory
   */*-todo.md : ignore any __-todo.md files in sub directory
   **/*-todo.md : ignore any __-todo.md files in current/sub directory
 
-global ignore file
+global ignore file:
   git config --global core.excludefile file_name
 
-  clear cache
+  clear cache:
     git rm -r --cached .
+
+delete files:
+  git rm file_name : delete the file and add that deletion to staging
+  restore the file :
+    git restore -S file_name, git restore file_name 
+
+
+rename files:
+  git mv file_name new_file_name
