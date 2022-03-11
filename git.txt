@@ -46,17 +46,19 @@ git push --set-upstream origin alpha : push with new brach
 
 git clone URL -b branch_name
 
+log:
+  git log --oneline : show all previous commits summary
+  git log : show all previous commits
+    Result :
+      commit 55f9942b936a771837b8b5af61ac9e4eda974171 (HEAD -> master)
+      Author: kavinda-ravishan <kvnravishan@outlook.com>
+      Date:   Tue Mar 1 15:33:46 2022 +0530
 
-git log : log
-  Result :
-    commit 55f9942b936a771837b8b5af61ac9e4eda974171 (HEAD -> master)
-    Author: kavinda-ravishan <kvnravishan@outlook.com>
-    Date:   Tue Mar 1 15:33:46 2022 +0530
+          init
+      
+    HEAD : currently working branch (master)
+    55f9942b936a771837b8b5af61ac9e4eda974171 : unique commit hash
 
-        init
-    
-  HEAD : currently working branch (master)
-  55f9942b936a771837b8b5af61ac9e4eda974171 : unique commit hash
 
 git environments:
   * working : after last commit
@@ -102,3 +104,8 @@ delete files:
 
 rename files:
   git mv file_name new_file_name
+
+differences:
+  git diff : show differences made in project after last staging
+  git diff commit_hash: show differences between now and commit hash
+    ex : "git diff 55f9942" or "git diff 55f9942b936a771837b8b5af61ac9e4eda974171"
