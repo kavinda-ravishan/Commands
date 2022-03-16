@@ -42,7 +42,7 @@ touch file_name : create new file
 git status : show untraked file
 git add . : add all untracked changes
 git commit -m "message"
-git push --set-upstream origin alpha : push with new brach
+git push --set-upstream origin alpha : push with new branch
 
 git clone URL -b branch_name
 
@@ -115,7 +115,7 @@ Amending:
   git commit -am 'new commit message'
   git commit -amend --no-edit
 
-reset:
+resetting:
   git reset commit_hash : reset git state to previous git commit (does not change or delete files)
   git reset --hard commit_hash : reset git state to previous git commit (change and delete files / not safe)
 
@@ -125,3 +125,14 @@ rebasing:
   git rebase -i --root : change commit order 
     (replace 'pick' with 's' to combine commit with previous commit and update with new commit message)
     (replace 'pick' with 'f' to combine commit with previous commit and keep previous commit message)
+
+branching:
+  git branch : show all branches
+  git switch -c branch_name : (older command : git checkout -b branch_name) create new branch (-c : --create)
+
+merging:
+  git merge branch_name : merge the branch
+
+delete a branch:
+  git branch -d branch_name : delete branch as long as free of conflicts (-d : --delete)
+  git branch -D branch_name : ignore all warnings and delete the branch
