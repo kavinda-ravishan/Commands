@@ -141,4 +141,4 @@ Stashing code:
   git stash : temporarily store change (ex: for do more important update)
   git stash list : show what stored [output : stash@{0}: WIP on master: 7cfe515 Stashing code]
   git stash apply 0 : apply stashed set of changes
-  git stash pop : remove the git stash from the list
+  git stash pop : apply changes and remove the git stash from the list
