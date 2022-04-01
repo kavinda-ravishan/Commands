@@ -136,3 +136,9 @@ merging:
 delete a branch:
   git branch -d branch_name : delete branch as long as free of conflicts (-d : --delete)
   git branch -D branch_name : ignore all warnings and delete the branch
+
+Stashing code:
+  git stash : temporarily store change (ex: for do more important update)
+  git stash list : show what stored
+  git stash apply : apply stashed set of changes
+  git stash pop : remove the git stash from the list
