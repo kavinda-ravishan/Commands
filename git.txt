@@ -137,8 +137,13 @@ delete a branch:
   git branch -d branch_name : delete branch as long as free of conflicts (-d : --delete)
   git branch -D branch_name : ignore all warnings and delete the branch
 
-Stashing code:
+stashing code:
   git stash : temporarily store change (ex: for do more important update)
   git stash list : show what stored [output : stash@{0}: WIP on master: 7cfe515 Stashing code]
   git stash apply 0 : apply stashed set of changes
   git stash pop : apply changes and remove the git stash from the list
+
+git clean:
+  git clean -n : dry run
+  git clean -d : directories
+  git clean -f : force
