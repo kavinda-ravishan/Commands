@@ -1,2 +1,15 @@
 create new repository:
   https://github.new/
+
+Remotes (can add multiple remote locations):
+	git remote add [Name] [URL] : ex  - git remote add origin [URL]
+	git remote remove [Name] : remove remote
+	git rename [Old Name] [New Name] : rename the remote
+	git remote : get list of remote names
+git remote -v : get list of remote names with additional information
+
+push:
+	git push [Remote] [Branch] : push
+	git push -u [Remote] [Branch] : push first time (-u : --set-upstream) (ex – git push -u origin main)
+	git push --all : push all local branches
+	git branch --set-upstream-to <origin/remote-branch> : create connection between local and remote branch.
