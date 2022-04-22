@@ -23,3 +23,9 @@ pull request:
 
 add collaborators:
 	Settings -> Collaborators -> Add people
+	
+sync with GitHub:
+	git clone [URL] : clone repository
+	git fetch : get changes information from remote repository
+	git pull : pull changes from remote repository
+	git push : push changes from main branch (-all : push all branches)
