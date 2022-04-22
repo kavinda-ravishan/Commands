@@ -15,4 +15,8 @@ push:
 	git branch --set-upstream-to <origin/remote-branch> : create connection between local and remote branch.
 
 pull request:
-	
+	1. make a change
+	2. select : Create a new branch for this commit and start a pull request.
+	3. click : Commit changes
+	4. click : Create pull request
+	5. Merge pull request
