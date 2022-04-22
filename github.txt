@@ -20,3 +20,6 @@ pull request:
 	3. click : Commit changes
 	4. click : Create pull request
 	5. Merge pull request
+
+add collaborators:
+	Settings -> Collaborators -> Add people
