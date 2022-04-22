@@ -13,3 +13,6 @@ push:
 	git push -u [Remote] [Branch] : push first time (-u : --set-upstream) (ex – git push -u origin main)
 	git push --all : push all local branches
 	git branch --set-upstream-to <origin/remote-branch> : create connection between local and remote branch.
+
+pull request:
+	
