@@ -1,0 +1,15 @@
+# ubuntu
+python3 -m venv env
+source env/bin/activate
+
+pip install Cython
+cython --directive language_level=3 --embed -a -o file.c file.pyx
+gcc -shared -pthread -fPIC -fwrapv -O2 -Wall -fno-strict-aliasing -I/usr/include/python3.8 -o file.so file.c
+
+
+# bash script example
+
+#!/bin/bash
+cython --directive language_level=3 --embed -a -o file.c file.pyx
+gcc -shared -pthread -fPIC -fwrapv -O2 -Wall -fno-strict-aliasing -I/usr/include/python3.8 -o file.so file.c
+python app.py
